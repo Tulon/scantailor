@@ -1559,7 +1559,7 @@ ThumbnailSequence::CompositeItem::CompositeItem(
 bool
 ThumbnailSequence::CompositeItem::incompleteThumbnail() const
 {
-	return dynamic_cast<IncompleteThumbnail*>(m_pThumb) != 0;
+	return m_pThumb == 0 && dynamic_cast<IncompleteThumbnail*>(m_pThumb) != 0;
 }
 
 void
